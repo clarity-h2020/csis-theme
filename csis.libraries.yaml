@@ -4,3 +4,4 @@ base:
       css/csis.css: {}
   js:
     js/csis.js: {}
+    js/seamless.parent.js: {}
