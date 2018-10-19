@@ -1,7 +1,14 @@
-base:
-  css:
-    theme:
-      css/csis.css: {}
+global-styling:
+    version: 0.1
+    css:
+      theme:
+        css/csis.css: {}
+
+global-scripts:
+  version: 0.1
   js:
+    js/seamless.parent.js: {
+        header: true,
+        preprocess: false
+    }
     js/csis.js: {}
-    js/seamless.parent.js: {}
