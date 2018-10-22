@@ -6,9 +6,7 @@ global-styling:
 
 global-scripts:
   version: 0.1
+  header: true
   js:
-    js/seamless.parent.js: {
-        header: true,
-        preprocess: false
-    }
+    js/seamless.parent.js: {preprocess: false}
     js/csis.js: {}
