@@ -1,5 +1,15 @@
+global-styling:
+    version: 0.1
+    css:
+      theme:
+        css/csis.css: {}
 
-
+global-scripts:
+  version: 0.1
+  header: true
+  js:
+    js/seamless.parent.js: {preprocess: false}
+    js/csis.js: {}
 
 
 
