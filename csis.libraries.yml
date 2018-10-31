@@ -5,22 +5,17 @@ global-styling:
         css/csis.css: {}
 
 global-scripts:
-  version: 0.1
+  version: 0.2
   header: true
   js:
     js/seamless.parent.js: {preprocess: false}
     js/csis.js: {}
-
-
-
-
-
-
-
-
-
-
-
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupal.ajax
+    - core/drupalSettings 
 
 
 
