@@ -1,0 +1,76 @@
+<?php
+use Drupal\Core\Template\Attribute;
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+ 
+function csis_preprocess_views_view(&$variables) {
+  $variables['csis_attributes_header'] = [];
+  $variables['csis_attributes_footer'] = [];
+  $variables['csis_attributes_header'] = new Attribute();
+  $variables['csis_attributes_footer'] = new Attribute();
+  $variables['csis_attributes_header']['class'] = [];
+  $variables['csis_attributes_footer']['class'] = [];
+  $variables['csis_attributes_header']['class'][] = 'view-header';
+  $variables['csis_attributes_footer']['class'][] = 'view-footer';
+  $view = $variables['view'];
+  if ($view->id() == 'study_group_main_navigation_v2' && $view->current_display == 'block_1'){ 
+    
+    $variables['csis_attributes_header']['class'][] = 'well';
+    $variables['csis_attributes_header']['class'][] = 'well-sm';
+    foreach ($view->argument as $arg) {
+      if ($arg->getPluginId() == 'null'){
+        $currentNode = $arg->getValue();
+      }
+    }
+    $rows = $variables['rows'];
+    foreach ($rows as $id => $row) {
+      if($currentNode == $row['content']['#row']->field_field_eu_gl_methodology_taxonomy_term_field_data_nid){
+        $class = 'active';
+        if (!isset($variables['rows'][$id]['attributes']['class'])) {
+          $variables['rows'][$id]['attributes']['class'] = [];
+        }
+        $variables['rows'][$id]['attributes']['class'][] = $class;
+      }
+    } 
+  }
+  if ($view->id() == 'data_resources' && $view->current_display == 'block_1'){ 
+   // kint($variables);
+  }
+
+}
+
+function csis_preprocess_views_view_list(&$variables) {
+
+  $view = $variables['view'];
+  if ($view->id() == 'study_group_main_navigation_v2' && $view->current_display == 'block_1'){ 
+    
+    foreach ($view->argument as $arg) {
+      if ($arg->getPluginId() == 'null'){
+        $currentNode = $arg->getValue();
+      }
+    }
+    $rows = $variables['rows'];
+    foreach ($rows as $id => $row) {
+      if($currentNode == $row['content']['#row']->field_field_eu_gl_methodology_taxonomy_term_field_data_nid){
+        $class = 'active';
+        if (!isset($variables['rows'][$id]['attributes']['class'])) {
+          $variables['rows'][$id]['attributes']['class'] = [];
+        }
+        $variables['rows'][$id]['attributes']['class'][] = $class;
+      }
+    } 
+  }
+
+}
+
+function csis_preprocess_views_view_grouping(&$variables){
+  $view = $variables['view'];
+  if ($view->id() == 'data_resources' && $view->current_display == 'block_1'){ 
+    kint($variables);
+  }
+}

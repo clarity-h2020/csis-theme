@@ -1,0 +1,45 @@
+/* */
+
+.study-main-nav .view-header {
+  float: left;
+}
+
+.table .table-row {
+  margin-bottom: 0px;
+  border-top: solid 1px #dddddd;
+  border-bottom: solid 1px #dddddd;
+  display: table;
+  float: none;
+}
+
+.table .table-row:nth-child(odd) {
+  background-color: #bce8f1;
+}
+.table .table-row:nth-child(even){
+  background-color: #f5f5f5;
+}
+
+.table .table-row .table-cell {
+  border-left: solid 1px #dddddd;
+  border-right: solid 1px #dddddd;
+  padding: 5px;
+  display: table-cell;
+  float: none;
+  
+}
+
+.inline-rows .views-row {
+  display: inline-block;  
+}
+
+.modal-body {
+  max-height: calc(100% - 120px);
+  overflow-y: scroll;
+}
+
+.definition-item .view-content,
+.resource-item {
+  padding-left: 30px;
+}
+
+
