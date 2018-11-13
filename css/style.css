@@ -4,6 +4,13 @@
   float: left;
 }
 
+.modal-body {
+  max-height: calc(100% - 120px);
+  overflow-y: scroll;
+}
+
+
+/* pseudo tables*/
 .table .table-row {
   margin-bottom: 0px;
   border-top: solid 1px #dddddd;
@@ -32,14 +39,18 @@
   display: inline-block;  
 }
 
-.modal-body {
-  max-height: calc(100% - 120px);
-  overflow-y: scroll;
-}
+
+
+/*Step Data Tab*/
 
 .definition-item .view-content,
 .resource-item {
   padding-left: 30px;
 }
 
-
+.show-in-preview{
+  cursor: pointer;
+}
+.item-preview {
+  padding: 30px;
+}

@@ -18,17 +18,18 @@ function csis_preprocess_views_view(&$variables) {
   $variables['csis_attributes_header']['class'][] = 'view-header';
   $variables['csis_attributes_footer']['class'][] = 'view-footer';
   $view = $variables['view'];
-  if ($view->id() == 'study_group_main_navigation_v2' && $view->current_display == 'block_1'){ 
+  if ($view->id() == 'study_group_main_navigation_v2' && ( $view->current_display == 'block_1' ||$view->current_display == 'block_2')){ 
     
     $variables['csis_attributes_header']['class'][] = 'well';
     $variables['csis_attributes_header']['class'][] = 'well-sm';
-    foreach ($view->argument as $arg) {
+   /* foreach ($view->argument as $arg) {
       if ($arg->getPluginId() == 'null'){
         $currentNode = $arg->getValue();
       }
     }
     $rows = $variables['rows'];
     foreach ($rows as $id => $row) {
+    if($currentNode){
       if($currentNode == $row['content']['#row']->field_field_eu_gl_methodology_taxonomy_term_field_data_nid){
         $class = 'active';
         if (!isset($variables['rows'][$id]['attributes']['class'])) {
@@ -37,6 +38,7 @@ function csis_preprocess_views_view(&$variables) {
         $variables['rows'][$id]['attributes']['class'][] = $class;
       }
     } 
+    }*/
   }
   if ($view->id() == 'data_resources' && $view->current_display == 'block_1'){ 
    // kint($variables);
