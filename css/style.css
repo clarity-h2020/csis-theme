@@ -55,6 +55,25 @@
   padding: 30px;
 }
 
+
+.group-title{
+  font-weight: bold;
+}
+/*
+.group .group {
+  height: 0px;
+  overflow: hidden;
+}
+
+.group.active .group {
+  height: auto;
+}
+*/
+.group .views-row,
+.group .group{
+  padding-left: 15px;
+}
+
 /* Frontpage Slideshow */
 
 .views_slideshow_cycle_main {
