@@ -50,6 +50,7 @@
 
 .show-in-preview{
   cursor: pointer;
+  display: block;
 }
 .item-preview {
   padding: 30px;
@@ -72,6 +73,11 @@
 .group .views-row,
 .group .group{
   padding-left: 15px;
+}
+
+.show-in-preview:hover,
+.show-in-preview.active {
+  background-color: #ebebeb;
 }
 
 /* Frontpage Slideshow */
