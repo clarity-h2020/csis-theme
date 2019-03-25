@@ -9,6 +9,23 @@
   overflow-y: scroll;
 }
 
+/* Study Navigation tabs */
+@media screen and (min-width: 1200px) {
+.study-main-nav .view-header.well {
+    height: 62px;
+    display: flex;
+    align-items: center;
+}
+.study-main-nav .nav-pills > li {
+    max-width: 16%;
+}
+.study-main-nav .nav-pills > li a {
+    height: 62px;
+    display: flex;
+    align-items: center;
+}
+}
+
 
 /* pseudo tables*/
 .table .table-row {
@@ -79,6 +96,7 @@
 .show-in-preview.active {
   background-color: #ebebeb;
 }
+
 #edit-group-general--content .field--name-field-contributors ul,
 #edit-group-general--content .field--name-field-sources ul{
   list-style: none;
@@ -101,6 +119,7 @@
 #edit-group-contexts .field--name-field-analysis-context .field{
   clear: both;
 }
+
 /* Frontpage Slideshow */
 
 .views_slideshow_cycle_main {
