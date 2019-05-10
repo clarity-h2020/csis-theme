@@ -290,3 +290,8 @@
       opacity: 0;
     }
   }
+
+/* Modal-forms */
+.ui-dialog.report-image-edit-form {
+	z-index: 1000;
+}
